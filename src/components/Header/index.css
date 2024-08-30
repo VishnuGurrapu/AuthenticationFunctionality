@@ -1,0 +1,11 @@
+/* Write your CSS code here */
+.list {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+.con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
