@@ -1,8 +1,10 @@
+import Cookies from 'js-cookie'
 import Header from '../Header'
+import Logout from '../LogoutButton'
 import './index.css'
 
 const Home = () => {
-  const onClickLogout = () => {
+  const onClickLogout = props => {
     const {history} = props
 
     Cookies.remove('jwt_token')
@@ -13,7 +15,7 @@ const Home = () => {
       <Header />
       <div>
         <h1>Home Route</h1>
-        <button onClick={onClickLogout}>Logout</button>
+        <Logout onClickLogout={onClickLogout} />
       </div>
     </>
   )
